@@ -379,7 +379,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   justify-content: flex-start;
   gap: 14px;
 }
-.footer-col li span:first-child { opacity: 0.6; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; }
+.footer-col li span:first-child { opacity: 0.6; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; min-width: 72px; flex-shrink: 0; }
 .footer-col a { transition: color 0.25s ease; }
 .footer-col a:hover { color: var(--sip-neon); }
 
