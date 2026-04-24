@@ -487,90 +487,6 @@
   margin-top: 4px;
 }
 
-/* ====================== HOURS STRIP ====================== */
-.hours-strip {
-  padding: clamp(80px, 10vw, 160px) 0;
-  position: relative;
-  border-top: 1px solid var(--sip-hairline);
-  border-bottom: 1px solid var(--sip-hairline);
-  background:
-    radial-gradient(ellipse 60% 60% at 50% 50%, rgba(255, 116, 129, 0.08), transparent 70%),
-    linear-gradient(180deg, rgba(26, 1, 8, 0.4), rgba(26, 1, 8, 0.6));
-}
-
-.hours-inner {
-  max-width: 1680px;
-  margin: 0 auto;
-  padding: 0 var(--edge);
-  display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: clamp(40px, 6vw, 100px);
-  align-items: center;
-}
-
-.neon-card {
-  position: relative;
-  aspect-ratio: 4/3;
-  border-radius: 4px;
-  overflow: hidden;
-  animation: breathe 6s ease-in-out infinite;
-}
-.neon-card img {
-  width: 100%; height: 100%; object-fit: cover;
-}
-.neon-card::after {
-  content: ""; position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(69, 4, 28, 0) 30%, rgba(69, 4, 28, 0.4));
-}
-
-.hours-table {
-  width: 100%;
-}
-.hours-table h2 {
-  font-family: var(--font-display);
-  font-size: clamp(36px, 4.5vw, 64px);
-  line-height: 1;
-  letter-spacing: -0.02em;
-  font-weight: 400;
-  margin-bottom: 40px;
-}
-.hours-table h2 em { font-style: italic; color: var(--sip-neon); }
-
-.hours-row {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-  padding: 20px 0;
-  border-top: 1px solid var(--sip-hairline);
-  gap: 20px;
-  transition: padding 0.4s ease;
-}
-.hours-row:last-of-type { border-bottom: 1px solid var(--sip-hairline); }
-.hours-row:hover { padding-left: 12px; }
-.hours-row .day {
-  font-family: var(--font-display);
-  font-size: clamp(22px, 2vw, 32px);
-}
-.hours-row .time {
-  font-family: var(--font-mono);
-  font-size: clamp(12px, 1vw, 14px);
-  letter-spacing: 0.15em;
-  color: var(--sip-neon-soft);
-}
-
-.hours-note {
-  margin-top: 28px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  opacity: 0.75;
-}
-[data-open-indicator].is-open { color: var(--sip-neon); }
-[data-open-indicator].is-closed { color: rgba(244, 230, 212, 0.6); }
 
 /* ====================== CLOSING CTA ====================== */
 .closer {
@@ -824,28 +740,6 @@
   </div>
 </section>
 
-<!-- ============ HOURS STRIP ============ -->
-<section class="hours-strip">
-  <div class="hours-inner">
-    <div class="neon-card reveal">
-      <img src="assets/neon-bucket-floor.jpeg" alt="SIP neon med champagnebøtte">
-    </div>
-    <div class="hours-table reveal delay-1">
-      <h2>Fra ettermiddag<br>til <em>sent på natt.</em></h2>
-
-      <div class="hours-row"><span class="day">Mandag — Torsdag</span><span class="time">15:00 — 02:30</span></div>
-      <div class="hours-row"><span class="day">Fredag — Lørdag</span><span class="time">15:00 — 03:30</span></div>
-      <div class="hours-row"><span class="day">Søndag</span><span class="time">15:00 — 01:00</span></div>
-
-      <div class="hours-note">
-        <span class="status-dot" style="width:8px;height:8px;border-radius:50%;background:var(--sip-neon);box-shadow:0 0 12px var(--sip-neon);animation:pulse 2.4s ease-in-out infinite;display:inline-block;"></span>
-        <span data-open-indicator>Åpent nå</span>
-        <span style="opacity:.4">·</span>
-        <span>Oslo-tid</span>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ============ CLOSER ============ -->
 <section class="closer">
