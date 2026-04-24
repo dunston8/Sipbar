@@ -376,7 +376,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   font-size: 14px;
   opacity: 0.85;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 14px;
 }
 .footer-col li span:first-child { opacity: 0.6; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; }
@@ -409,7 +409,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   padding-top: 24px;
   border-top: 1px solid var(--sip-hairline);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 20px;
   font-family: var(--font-mono);
