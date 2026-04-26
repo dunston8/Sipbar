@@ -134,9 +134,9 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   top: 0; left: 0; right: 0;
   z-index: 100;
   padding: 18px var(--edge);
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
   transition: background 0.4s ease, backdrop-filter 0.4s ease, padding 0.3s ease;
 }
 .nav.scrolled {
@@ -153,6 +153,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   align-items: center;
   gap: 12px;
   height: 88px;
+  justify-self: start;
   transition: height 0.3s ease;
 }
 .nav-logo img {
@@ -213,6 +214,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  justify-self: end;
   gap: 10px;
   padding: 12px 22px;
   min-width: 168px;
@@ -243,6 +245,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   width: 40px;
   height: 40px;
   position: relative;
+  justify-self: end;
 }
 .nav-mobile-toggle span {
   position: absolute;
