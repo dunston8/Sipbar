@@ -214,11 +214,11 @@
   overflow: visible;
   background: linear-gradient(90deg,
     transparent 0%,
-    rgba(255, 116, 129, 0.25) 15%,
-    rgba(255, 116, 129, 0.7) 50%,
-    rgba(255, 116, 129, 0.25) 85%,
+    rgba(255, 116, 129, 0.35) 15%,
+    rgba(255, 116, 129, 0.9) 50%,
+    rgba(255, 116, 129, 0.35) 85%,
     transparent 100%);
-  box-shadow: 0 0 12px rgba(255, 116, 129, 0.4), 0 0 30px rgba(255, 116, 129, 0.15);
+  box-shadow: 0 0 16px rgba(255, 116, 129, 0.55), 0 0 40px rgba(255, 116, 129, 0.2);
   animation: neonLinePulse 4s ease-in-out infinite;
 }
 .neon-divider::after {
@@ -226,12 +226,12 @@
   position: absolute;
   top: 0; bottom: 0;
   width: 25%;
-  background: linear-gradient(90deg, transparent, rgba(255, 116, 129, 0.6), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 116, 129, 0.8), transparent);
   animation: neonSlide 5s ease-in-out infinite;
 }
 @keyframes neonLinePulse {
-  0%, 100% { opacity: 1; box-shadow: 0 0 12px rgba(255, 116, 129, 0.4), 0 0 30px rgba(255, 116, 129, 0.15); }
-  50%       { opacity: 0.7; box-shadow: 0 0 6px rgba(255, 116, 129, 0.25), 0 0 18px rgba(255, 116, 129, 0.08); }
+  0%, 100% { opacity: 1; box-shadow: 0 0 16px rgba(255, 116, 129, 0.55), 0 0 40px rgba(255, 116, 129, 0.2); }
+  50%       { opacity: 0.75; box-shadow: 0 0 8px rgba(255, 116, 129, 0.35), 0 0 24px rgba(255, 116, 129, 0.1); }
 }
 @keyframes neonSlide {
   0%   { left: -25%; }
