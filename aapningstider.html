@@ -60,7 +60,7 @@
 
 .board-row {
   display: grid;
-  grid-template-columns: 52px 1.2fr 1fr auto;
+  grid-template-columns: 52px 1.2fr 1fr;
   gap: 24px;
   align-items: center;
   padding: clamp(22px, 2.8vw, 36px) 0;
@@ -100,22 +100,6 @@
   letter-spacing: 0.14em;
   color: var(--sip-cream);
   opacity: 0.85;
-}
-.board-row .badge {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  padding: 6px 12px;
-  border-radius: 999px;
-  border: 1px solid var(--sip-hairline-strong);
-  opacity: 0.7;
-  white-space: nowrap;
-}
-.board-row.is-today .badge {
-  border-color: var(--sip-neon);
-  color: var(--sip-neon-soft);
-  opacity: 1;
 }
 
 /* Status card */
@@ -241,17 +225,14 @@
   .hrs-head { grid-template-columns: 1fr; }
   .board { grid-template-columns: 1fr; }
   .status-card { position: static; }
-  .board-row { grid-template-columns: 40px 1fr auto; }
-  .board-row .time { grid-column: 2 / -1; }
-  .board-row .badge { grid-row: 1; }
+  .board-row { grid-template-columns: 40px 1fr 1fr; }
   .hrs-extra { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
   .hrs-head h1 { font-size: clamp(52px, 14vw, 96px); }
   .board-row .day { font-size: 26px; }
   .board-row { grid-template-columns: 32px 1fr; gap: 14px; }
-  .board-row .time, .board-row .badge { grid-column: 2; grid-row: auto; }
-  .board-row .badge { justify-self: start; margin-top: 4px; }
+  .board-row .time { grid-column: 2; }
 }
 </style>
 </head>
@@ -290,13 +271,13 @@
 
   <div class="board">
     <div class="board-left">
-      <div class="board-row reveal" data-day="Mon"><span class="idx">/ 01</span><span class="day">Mandag</span><span class="time">15:00 — 02:30</span><span class="badge">Rolig kveld</span></div>
-      <div class="board-row reveal delay-1" data-day="Tue"><span class="idx">/ 02</span><span class="day">Tirsdag</span><span class="time">15:00 — 02:30</span><span class="badge">Rolig kveld</span></div>
-      <div class="board-row reveal delay-1" data-day="Wed"><span class="idx">/ 03</span><span class="day">Onsdag</span><span class="time">15:00 — 02:30</span><span class="badge">Rolig kveld</span></div>
-      <div class="board-row reveal delay-2" data-day="Thu"><span class="idx">/ 04</span><span class="day">Torsdag</span><span class="time">15:00 — 02:30</span><span class="badge">Etter jobb</span></div>
-      <div class="board-row reveal delay-2" data-day="Fri"><span class="idx">/ 05</span><span class="day">Fredag</span><span class="time">15:00 — 03:30</span><span class="badge">Helg</span></div>
-      <div class="board-row reveal delay-3" data-day="Sat"><span class="idx">/ 06</span><span class="day">Lørdag</span><span class="time">15:00 — 03:30</span><span class="badge">Helg</span></div>
-      <div class="board-row reveal delay-3" data-day="Sun"><span class="idx">/ 07</span><span class="day">Søndag</span><span class="time">15:00 — 01:00</span><span class="badge">Sunday Sip</span></div>
+      <div class="board-row reveal" data-day="Mon"><span class="idx">/ 01</span><span class="day">Mandag</span><span class="time">15:00 — 02:30</span></div>
+      <div class="board-row reveal delay-1" data-day="Tue"><span class="idx">/ 02</span><span class="day">Tirsdag</span><span class="time">15:00 — 02:30</span></div>
+      <div class="board-row reveal delay-1" data-day="Wed"><span class="idx">/ 03</span><span class="day">Onsdag</span><span class="time">15:00 — 02:30</span></div>
+      <div class="board-row reveal delay-2" data-day="Thu"><span class="idx">/ 04</span><span class="day">Torsdag</span><span class="time">15:00 — 02:30</span></div>
+      <div class="board-row reveal delay-2" data-day="Fri"><span class="idx">/ 05</span><span class="day">Fredag</span><span class="time">15:00 — 03:30</span></div>
+      <div class="board-row reveal delay-3" data-day="Sat"><span class="idx">/ 06</span><span class="day">Lørdag</span><span class="time">15:00 — 03:30</span></div>
+      <div class="board-row reveal delay-3" data-day="Sun"><span class="idx">/ 07</span><span class="day">Søndag</span><span class="time">15:00 — 01:00</span></div>
     </div>
 
     <aside class="status-card reveal delay-2">
