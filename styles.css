@@ -470,26 +470,21 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .footer-inner { grid-template-columns: 1fr 1fr; }
   .footer-brand { grid-column: 1 / -1; }
 
-  /* Mobile nav: flush to top, always opaque background.
-     padding-top uses env(safe-area-inset-top) so content clears the
-     notch/Dynamic Island on viewport-fit=cover devices. */
+  /* Mobile nav: zero vertical padding so no dark strip appears above the
+     logo when the nav background becomes opaque on scroll. */
   .nav {
     top: 0;
-    padding-top: max(10px, env(safe-area-inset-top));
-    padding-bottom: 10px;
-    background: rgba(26, 1, 8, 0.95);
-    backdrop-filter: blur(18px) saturate(140%);
-    -webkit-backdrop-filter: blur(18px) saturate(140%);
-    border-bottom: 1px solid var(--sip-hairline);
+    padding-top: 0;
+    padding-bottom: 0;
   }
   .nav.scrolled {
-    padding-top: max(10px, env(safe-area-inset-top));
-    padding-bottom: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   .nav-logo,
-  .nav-logo img { height: 60px; }
+  .nav-logo img { height: 72px; }
   .nav.scrolled .nav-logo,
-  .nav.scrolled .nav-logo img { height: 52px; }
+  .nav.scrolled .nav-logo img { height: 64px; }
 }
 
 @media (max-width: 640px) {
