@@ -1,0 +1,13 @@
+{
+  "redirects": [
+    { "source": "/index.html",       "destination": "/",              "permanent": true },
+    { "source": "/reserver.html",    "destination": "/reserver-bord", "permanent": true },
+    { "source": "/aapningstider.html","destination": "/apningstider",  "permanent": true },
+    { "source": "/lokasjoner.html",  "destination": "/vare-lokasjoner","permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/reserver-bord",    "destination": "/reserver.html"      },
+    { "source": "/apningstider",     "destination": "/aapningstider.html" },
+    { "source": "/vare-lokasjoner",  "destination": "/lokasjoner.html"    }
+  ]
+}
