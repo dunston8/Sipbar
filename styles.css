@@ -469,6 +469,27 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .nav-mobile-toggle { display: block; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
   .footer-brand { grid-column: 1 / -1; }
+
+  /* Mobile nav: flush to top, always opaque background.
+     padding-top uses env(safe-area-inset-top) so content clears the
+     notch/Dynamic Island on viewport-fit=cover devices. */
+  .nav {
+    top: 0;
+    padding-top: max(10px, env(safe-area-inset-top));
+    padding-bottom: 10px;
+    background: rgba(26, 1, 8, 0.95);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    border-bottom: 1px solid var(--sip-hairline);
+  }
+  .nav.scrolled {
+    padding-top: max(10px, env(safe-area-inset-top));
+    padding-bottom: 10px;
+  }
+  .nav-logo,
+  .nav-logo img { height: 60px; }
+  .nav.scrolled .nav-logo,
+  .nav.scrolled .nav-logo img { height: 52px; }
 }
 
 @media (max-width: 640px) {
