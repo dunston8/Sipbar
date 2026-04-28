@@ -99,6 +99,15 @@
     });
   }
 
+  // Tonight's hours widget
+  const tonightEl = document.querySelector('[data-tonight-hours]');
+  if (tonightEl) {
+    const wdFmt = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Oslo', weekday: 'short' });
+    const wd = wdFmt.format(new Date());
+    const closeMap = { Mon:'02:30', Tue:'02:30', Wed:'02:30', Thu:'02:30', Fri:'03:30', Sat:'03:30', Sun:'01:00' };
+    tonightEl.textContent = '15:00 – ' + (closeMap[wd] || '02:30');
+  }
+
   // Hero cursor spotlight
   const spot = document.querySelector('[data-spotlight]');
   if (spot) {
